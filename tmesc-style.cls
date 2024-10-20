@@ -1,10 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TMESC Thesis Class File
-% Version 0.1 (Apr/2023)
+% Version 0.3 (Oct/2024)
 %
-% Adapted to MESC/ISEP (Apr/2023) by
-% Luis Miguel Pinho
-% 
 % Based on MastersDoctoralThesis Version 1.2 by Vel (vel@latextemplates.com) and
 % Johannes Böttcher, downloaded from (21/11/15):
 % http://www.LaTeXTemplates.com
@@ -13,10 +10,18 @@
 %  Vel (vel@latextemplates.com)
 %  Johannes Böttcher
 %
-% Adapted to TMDEI/ISEP style (Dec/2015) by 
+% Based on the TMDEI/ISEP style (Dec/2015) by 
 %  Nuno Pereira (nap@isep.ipp.pt) and 
 %  Paulo Baltarejo (pbs@isep.ipp.pt)
 %
+%
+% Adapted to MESCC/ISEP (Apr/2023) by
+%  Luis Miguel Pinho (lmp@isep.ipp.pt)
+%
+% Last update (Oct/2024)
+%  Luis Miguel Pinho (lmp@isep.ipp.pt)
+%  António Barros (amb@isep.ipp.pt)
+% 
 % Notes:
 % 1) This class file defines the structure and layout of the template file (main.tex).
 % 2) It has been written in such a way that under most circumstances you 
@@ -162,47 +167,68 @@
 
 \RequirePackage{booktabs} % Required for better table rules
 
+\RequirePackage{lmodern}     % AMB: Latin Modern Roman for the text body.
+\RequirePackage[sf]{noto}    % AMB: Noto Sans sans serif font for headings.
+\RequirePackage{inconsolata} % AMB Inconsolata mono space font for listings.
+
+\renewcommand{\familydefault}{\rmdefault} % AMB: The text body uses a Roman (serif) typeface.
+
+\RequirePackage{sectsty}    % AMB: This package allows customization of the font used for headings.
+\allsectionsfont{\sffamily} % AMB: Sets all section headings to use a sans serif font.
+
 \RequirePackage[utf8]{inputenc} % Required for inputting portuguese characters
 \RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters
-\RequirePackage{lmodern} % use the Latin Modern fonts to avoid "blurring"
 
 \RequirePackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
-
-\RequirePackage{cmbright} % Default font: CM Bright, lighter sans-serif variant of Computer Modern Sans Serif 
 
 \RequirePackage[chapter]{algorithm} % Required for Algorithms
 \RequirePackage{algpseudocode} % Part algorithmicx package, required to customize the layout of algorithms.
 
 \RequirePackage{listings} % Required for code listings
-\lstset{ %
-  backgroundcolor=\color{white},   % choose the background color; 
-  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
-  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-  breaklines=true,                 % sets automatic line breaking
-  captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{green},    % comment style
-  deletekeywords={...},            % if you want to delete keywords from the given language
-  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  frame=single,	                   % adds a frame around the code
-  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code 
-  keywordstyle=\color{blue},       % keyword style
-  language=Java,                 % the default language of the code
-  otherkeywords={*,...},           % if you want to add more keywords to the set
-  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
-  numbersep=5pt,                   % how far the line-numbers are from the code
-  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
-  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text
-  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-  showstringspaces=false,          % underline spaces within strings only
-  showtabs=false,                  % show tabs within strings adding particular underscores
-  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
-  stringstyle=\color{MidnightBlue},     % string literal style
-  tabsize=2,	                   % sets default tabsize to 2 spaces
-  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+\lstset{
+  backgroundcolor=\color{white},     % choose the background color; 
+  basicstyle=\ttfamily\footnotesize, % the size of the fonts that are used for the code
+  breakatwhitespace=false,           % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                   % sets automatic line breaking
+  captionpos=b,                      % sets the caption-position to bottom
+  commentstyle=\color{OliveGreen},   % comment style
+  deletekeywords={...},              % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
+  extendedchars=true,                % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                     % adds a frame around the code
+  keepspaces=true,                   % keeps spaces in text, useful for keeping indentation of code 
+  keywordstyle=\color{blue},         % keyword style
+  language=C,                        % the default language of the code
+  otherkeywords={*,...},             % if you want to add more keywords to the set
+  numbers=left,                      % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                     % how far the line-numbers are from the code
+  numberstyle=\tiny\color{gray},     % the style that is used for the line-numbers
+  rulecolor=\color{black},           % if not set, the frame-color may be changed on line-breaks within not-black text
+  showspaces=false,                  % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,            % underline spaces within strings only
+  showtabs=false,                    % show tabs within strings adding particular underscores
+  stepnumber=1,                      % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{MidnightBlue},  % string literal style
+  tabsize=2,	                     % sets default tabsize to 2 spaces
+  title=\lstname,                    % show the filename of files included with \lstinputlisting; also try caption instead of title
+  inputencoding = utf8,              % Input encoding
+  literate=                          % Support additional characters
+      {á}{{\'a}}1  {é}{{\'e}}1  {í}{{\'i}}1 {ó}{{\'o}}1  {ú}{{\'u}}1
+      {Á}{{\'A}}1  {É}{{\'E}}1  {Í}{{\'I}}1 {Ó}{{\'O}}1  {Ú}{{\'U}}1
+      {à}{{\`a}}1  {è}{{\`e}}1  {ì}{{\`i}}1 {ò}{{\`o}}1  {ù}{{\`u}}1
+      {À}{{\`A}}1  {È}{{\'E}}1  {Ì}{{\`I}}1 {Ò}{{\`O}}1  {Ù}{{\`U}}1
+      {ä}{{\"a}}1  {ë}{{\"e}}1  {ï}{{\"i}}1 {ö}{{\"o}}1  {ü}{{\"u}}1
+      {Ä}{{\"A}}1  {Ë}{{\"E}}1  {Ï}{{\"I}}1 {Ö}{{\"O}}1  {Ü}{{\"U}}1
+      {â}{{\^a}}1  {ê}{{\^e}}1  {î}{{\^i}}1 {ô}{{\^o}}1  {û}{{\^u}}1
+      {Â}{{\^A}}1  {Ê}{{\^E}}1  {Î}{{\^I}}1 {Ô}{{\^O}}1  {Û}{{\^U}}1
+      {œ}{{\oe}}1  {Œ}{{\OE}}1  {æ}{{\ae}}1 {Æ}{{\AE}}1  {ß}{{\ss}}1
+      {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1  {Ø}{{\O}}1   {å}{{\r a}}1
+      {Å}{{\r A}}1 {ã}{{\~a}}1  {õ}{{\~o}}1 {Ã}{{\~A}}1  {Õ}{{\~O}}1
+      {ñ}{{\~n}}1  {Ñ}{{\~N}}1  {¿}{{?`}}1  {¡}{{!`}}1
+      {°}{{\textdegree}}1 {º}{{\textordmasculine}}1 {ª}{{\textordfeminine}}1
 }
 
-\RequirePackage[acronym,nonumberlist,toc]{glossaries} %Required to define acronyms and make glossaries
+\RequirePackage[acronym,nonumberlist,toc]{glossaries} % Required to define acronyms and make glossaries
 
 \RequirePackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
@@ -297,6 +323,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \def\ttitle{}
 \newcommand*{\supervisor}[1]{\def\supname{#1}}
 \newcommand*{\cosupervisor}[1]{\def\cosupname{#1}}
+\newcommand*{\externalsupervisor}[1]{\def\extsupname{#1}}
 \newcommand*{\thesistitle}[1]{\def\@title{#1}\def\ttitle{#1}}
 \newcommand*{\thesissubtitle}[1]{\def\tsubtitle{#1}}
 \newcommand*{\committeepresident}[1]{\def\presidentname{#1}}
@@ -312,54 +339,90 @@ KOMA-script documentation for details.}]{fancyhdr}
 %----------------------------------------------------------------------------------------
 
 \newcommand{\dissertationdisclamer}{Dissertation submitted in partial fulfilment of the requirements for the\\ Master’s degree in Critical Computing Systems Engineering}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{Dissertation submitted in partial fulfilment of the requirements for the\\ Master’s degree in Critical Computing Systems Engineering}
-\providecaptionname{portuguese}{\dissertationdisclamer}{Disserta\c{c}\~ao para obten\c{c}\~ao do Grau de Mestre em \\ Engenharia de Sistemas Computacionais Críticos} % Portuguese 
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{Dissertation submitted in partial fulfilment of the requirements for the \\ Master’s degree in Critical Computing Systems Engineering}
+\providecaptionname{portuguese}{\dissertationdisclamer}{Disserta\c{c}\~ao submetida para satisfa\c{c}\~ao parcial dos requisitos do grau de \\ Mestre em Engenharia de Sistemas Computacionais Críticos} % Portuguese 
+
 \newcommand{\supervisorlabel}{Supervisor}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\supervisorlabel}{Supervisor}
 \providecaptionname{portuguese}{\supervisorlabel}{Orientador}
+
 \newcommand{\cosupervisorlabel}{Co-Supervisor}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\cosupervisorlabel}{Co-Supervisor}
-\providecaptionname{portuguese}{\cosupervisorlabel}{Co-Orientador}
+\providecaptionname{portuguese}{\cosupervisorlabel}{Coorientador} % AMB: De acordo com a mais recente ortografia.
+
+\newcommand{\externalsupervisorlabel}{External Supervisor}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\externalsupervisorlabel}{External Supervisor}
+\providecaptionname{portuguese}{\cosupervisorlabel}{Supervisor} % AMB: Supervisor na empresa.
+
 \newcommand{\evallabel}{Evaluation Committee}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\evallabel}{Evaluation Committee}
 \providecaptionname{portuguese}{\evallabel}{J\'uri}
+
 \newcommand{\presidentlabel}{President}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\presidentlabel}{President}
 \providecaptionname{portuguese}{\presidentlabel}{Presidente}
+
 \newcommand{\memberslabel}{Members}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\memberslabel}{Members}
 \providecaptionname{portuguese}{\memberslabel}{Vogais}
 
 \newcommand{\maketitlepage}{
 	\checktoopen
+	\newgeometry{top=3cm, bottom=3cm, left=4cm, right=4cm}
 	\begin{titlepage}
 	\begin{center}
     {\noindent \includegraphics[width=4in]{/frontmatter/assets/isep_wordmark_expanded_vintage.png} \\}
+	
 	\null\vfill
+	
+	\setstretch{2.0}
+%	{\Huge \sffamily \bfseries \ttitle}\\ % Thesis title
+	{\huge \sffamily \bfseries \ttitle}\\ % Thesis title
+%
+	\bigskip
+%	\ifdefined\tsubtitle {\huge \sffamily \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
+	\onehalfspacing
+	\ifdefined\tsubtitle {\Large \sffamily \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
+	\singlespacing
 
-	{\Huge \bfseries \ttitle}\\ % Thesis title
-	\bigskip
-	\ifdefined\tsubtitle {\huge \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
 	\vfill
-	{\Large \bfseries \authorname}\\
+	
+	{\Large \sffamily \bfseries \authorname}\\
+	
 	\vfill
-	{\large \bfseries \dissertationdisclamer}
-	\end{center}
+
+%	{\large \sffamily \bfseries \dissertationdisclamer}
+	{\large \sffamily \dissertationdisclamer}
+%	\end{center}
+
 	\vfill
-	{\normalsize \bfseries \noindent \supervisorlabel: \supname } \\
-	\ifdefined\cosupname {\normalsize \bfseries \cosupervisorlabel: \cosupname} \\ \fi
+
+%	{\normalsize \sffamily \bfseries \noindent \supervisorlabel: \supname } \\
+	{\normalsize \sffamily \noindent \supervisorlabel: \supname } \\
+%	\ifdefined\cosupname {\normalsize \sffamily \bfseries \cosupervisorlabel: \cosupname} \\ \fi
+	\ifdefined\cosupname {\normalsize \sffamily \cosupervisorlabel: \cosupname} \\ \fi
+	\ifdefined\extsupname {\normalsize \sffamily \externalsupervisorlabel: \extsupname} \\ \fi
+	\end{center} %%%% AMB
+
 	\vfill
-	{\normalsize \bfseries \noindent \evallabel:} \\
-	{\normalsize \presidentlabel: } \\
-	\bigskip
-	{\normalsize \presidentname } \\
-	{\normalsize \memberslabel:} \\
-	{\normalsize \committee } \\
-	\smallskip \\
+
+	{\normalsize \sffamily \bfseries \noindent \evallabel:} \\
+	{\normalsize \sffamily \presidentlabel: } \\
+	{\normalsize \sffamily \presidentname } \\
+	
+%	\bigskip
+	{\normalsize \sffamily \memberslabel:} \\
+	{\normalsize \sffamily \committee } \\
+%	\smallskip \\
+
+	\vfill
+
 	\begin{center}
-	{\normalsize \tdate} % Date
+	{\normalsize \sffamily \tdate} % Date
 	\end{center}
 	\end{titlepage}
+
+	\restoregeometry
 }
 
 %----------------------------------------------------------------------------------------
@@ -393,6 +456,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\dedicationlabel}{Dedicatory}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dedicationlabel}{Dedicatory}
 \providecaptionname{portuguese}{\dedicationlabel}{Dedicat\'oria} % Portuguese 
+
 \newenvironment{dedicatory}{
 	\checktoopen
 	\tttypeout{\dedicationlabel}
@@ -410,9 +474,11 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\abslabel}{Abstract}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabel}{Abstract}
 \providecaptionname{portuguese}{\abslabel}{Resumo} % Portuguese 
+
 \newcommand{\keywordslabel}{Keywords}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\keywordslabel}{Keywords}
 \providecaptionname{portuguese}{\keywordslabel}{Palavras-chave} % Portuguese 
+
 \newenvironment{abstract}{
 	\checktoopen
 	\tttypeout{\abstractname}
@@ -429,6 +495,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 \newcommand{\abslabelotherlang}{Resumo}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\abslabelotherlang}{Resumo}
 \providecaptionname{portuguese}{\abslabelotherlang}{Abstract}  
+
 \newenvironment{abstractotherlanguage}{
 	\checktoopen
 	\tttypeout{\abslabel}
@@ -496,8 +563,8 @@ KOMA-script documentation for details.}]{fancyhdr}
 %	ACKNOWLEDGEMENT PAGE DESIGN
 %----------------------------------------------------------------------------------------
 
-\newcommand{\acknowledgementlabel}{Acknowledgement}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementlabel}{Acknowledgement} % Acknowledgement text for English countries
+\newcommand{\acknowledgementlabel}{Acknowledgements}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish} {\acknowledgementlabel}{Acknowledgements} % Acknowledgement text for English countries
 \providecaptionname{portuguese} {\acknowledgementlabel}{Agradecimentos}
 \newenvironment{acknowledgements}{
 	%\addchaptertocentry{\acknowledgementlabel} % Add the acknowledgements to the table of contents
@@ -529,6 +596,7 @@ urlcolor=CadetBlue, % The color of hyperlinks (URLs)
 pdfstartview={FitV},
 unicode,
 breaklinks=true,
+hidelinks,
 }
 
 \pdfstringdefDisableCommands{% If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
