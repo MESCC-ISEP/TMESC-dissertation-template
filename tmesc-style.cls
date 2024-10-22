@@ -167,14 +167,11 @@
 
 \RequirePackage{booktabs} % Required for better table rules
 
-\RequirePackage{lmodern}     % AMB: Latin Modern Roman for the text body.
-\RequirePackage[sf]{noto}    % AMB: Noto Sans sans serif font for headings.
+\RequirePackage{lmodern} % AMB: Latin Modern Roman for the text body.
+\RequirePackage[defaultsans,scale=0.90]{opensans} % AMB: Sans serif font similar to Calibri and Aptos, as required by the ISEP template guidelines.
 \RequirePackage{inconsolata} % AMB Inconsolata mono space font for listings.
 
-\renewcommand{\familydefault}{\rmdefault} % AMB: The text body uses a Roman (serif) typeface.
-
-\RequirePackage{sectsty}    % AMB: This package allows customization of the font used for headings.
-\allsectionsfont{\sffamily} % AMB: Sets all section headings to use a sans serif font.
+\renewcommand{\familydefault}{\sfdefault} % AMB: The text body uses a sans serif typeface, as specified by the ISEP template guidelines.
 
 \RequirePackage[utf8]{inputenc} % Required for inputting portuguese characters
 \RequirePackage[T1]{fontenc} % Output font encoding for portuguese characters
@@ -368,58 +365,50 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \newcommand{\maketitlepage}{
 	\checktoopen
-	\newgeometry{top=3cm, bottom=3cm, left=4cm, right=4cm}
+	\newgeometry{top=3.5cm, bottom=3.0cm, left=3.0cm, right=3.0cm}
 	\begin{titlepage}
 	\begin{center}
-    {\noindent \includegraphics[width=4in]{/frontmatter/assets/isep_wordmark_expanded_vintage.png} \\}
+    {\noindent \includegraphics[width=3in]{/frontmatter/assets/isep_wordmark_expanded_vintage.pdf}}
+	\null
+
+	\vspace*{0.5cm}
 	
-	\null\vfill
-	
-	\setstretch{2.0}
-%	{\Huge \sffamily \bfseries \ttitle}\\ % Thesis title
-	{\huge \sffamily \bfseries \ttitle}\\ % Thesis title
-%
+	\doublespacing
+	{\huge \sffamily \bfseries \ttitle} % Thesis title
+
+
 	\bigskip
-%	\ifdefined\tsubtitle {\huge \sffamily \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
-	\onehalfspacing
-	\ifdefined\tsubtitle {\Large \sffamily \bfseries \tsubtitle} \\ \fi % Thesis sub title, if exists
-	\singlespacing
-
-	\vfill
+	\ifdefined\tsubtitle {\Large \sffamily \bfseries \tsubtitle} \fi % Thesis sub title, if exists
 	
-	{\Large \sffamily \bfseries \authorname}\\
+	\vspace*{1.5cm}
 	
-	\vfill
-
-%	{\large \sffamily \bfseries \dissertationdisclamer}
-	{\large \sffamily \dissertationdisclamer}
-%	\end{center}
-
-	\vfill
-
-%	{\normalsize \sffamily \bfseries \noindent \supervisorlabel: \supname } \\
-	{\normalsize \sffamily \noindent \supervisorlabel: \supname } \\
-%	\ifdefined\cosupname {\normalsize \sffamily \bfseries \cosupervisorlabel: \cosupname} \\ \fi
-	\ifdefined\cosupname {\normalsize \sffamily \cosupervisorlabel: \cosupname} \\ \fi
-	\ifdefined\extsupname {\normalsize \sffamily \externalsupervisorlabel: \extsupname} \\ \fi
-	\end{center} %%%% AMB
-
-	\vfill
-
-	{\normalsize \sffamily \bfseries \noindent \evallabel:} \\
-	{\normalsize \sffamily \presidentlabel: } \\
-	{\normalsize \sffamily \presidentname } \\
+	{\Large \sffamily \bfseries \authorname}
 	
-%	\bigskip
-	{\normalsize \sffamily \memberslabel:} \\
-	{\normalsize \sffamily \committee } \\
-%	\smallskip \\
+	\vspace*{1.5cm}
 
-	\vfill
-
-	\begin{center}
-	{\normalsize \sffamily \tdate} % Date
+	{\large \sffamily \bfseries \dissertationdisclamer}
 	\end{center}
+
+	\vfill
+
+	{\normalsize \sffamily \bfseries \noindent \supervisorlabel: \supname \\}
+	\ifdefined\cosupname {\normalsize \sffamily \bfseries \noindent \cosupervisorlabel: \cosupname \\} \fi
+	\ifdefined\extsupname {\normalsize \sffamily \bfseries \noindent \externalsupervisorlabel: \extsupname} \fi
+	\null
+
+	\vspace*{0.6cm}
+
+	{\footnotesize \sffamily \bfseries \noindent \evallabel:} \\
+	{\footnotesize \sffamily \noindent\presidentlabel: } \\
+	{\footnotesize \sffamily \noindent \presidentname } \\
+	{\footnotesize \sffamily \noindent \memberslabel:} \\
+	{\footnotesize \sffamily \noindent \committee } \\
+	\null
+	\vspace*{0.7cm}
+
+	\begin{flushright}
+	{\footnotesize \sffamily \tdate} % Date
+	\end{flushright}
 	\end{titlepage}
 
 	\restoregeometry
@@ -586,17 +575,17 @@ KOMA-script documentation for details.}]{fancyhdr}
 \AfterPackage{biblatex}{ % Load the hyperref package after the biblatex package for compatibility 
 \RequirePackage{hyperref} % Required for customising links and the PDF
 \hypersetup{pdfpagemode={UseOutlines},
-bookmarksopen=true,
-bookmarksopenlevel=0,
-hypertexnames=false,
-colorlinks=\hreflinkcolor, % Set coloring of links
-citecolor=CadetBlue, % The color of citations
-linkcolor=NavyBlue, % The color of references to document elements (sections, figures, etc)
-urlcolor=CadetBlue, % The color of hyperlinks (URLs)
-pdfstartview={FitV},
-unicode,
-breaklinks=true,
-hidelinks,
+	bookmarksopen=true,
+	bookmarksopenlevel=0,
+	hypertexnames=false,
+	colorlinks=\hreflinkcolor, % Set coloring of links
+	citecolor=CadetBlue, % The color of citations
+	linkcolor=NavyBlue, % The color of references to document elements (sections, figures, etc)
+	urlcolor=CadetBlue, % The color of hyperlinks (URLs)
+	pdfstartview={FitV},
+	unicode,
+	breaklinks=true,
+	hidelinks,
 }
 
 \pdfstringdefDisableCommands{% If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
