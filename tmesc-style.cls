@@ -349,7 +349,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 \newcommand{\externalsupervisorlabel}{External Supervisor}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\externalsupervisorlabel}{External Supervisor}
-\providecaptionname{portuguese}{\cosupervisorlabel}{Supervisor} % AMB: Supervisor na empresa.
+\providecaptionname{portuguese}{\externalsupervisorlabel}{Supervisor} % AMB: Supervisor na empresa.
 
 \newcommand{\evallabel}{Evaluation Committee}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\evallabel}{Evaluation Committee}
