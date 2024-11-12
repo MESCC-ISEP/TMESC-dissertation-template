@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TMESC Thesis Class File
-% Version 0.3 (Oct/2024)
+% Version 0.3 (Nov/2024)
 %
 % Based on MastersDoctoralThesis Version 1.2 by Vel (vel@latextemplates.com) and
 % Johannes Böttcher, downloaded from (21/11/15):
@@ -193,7 +193,7 @@
   escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
   extendedchars=true,                % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   frame=single,	                     % adds a frame around the code
-  xleftmargin=1cm,					 % AMB: According to ISEP dissertation guidelines
+  xleftmargin=1cm,                   % AMB: According to ISEP dissertation guidelines
   keepspaces=true,                   % keeps spaces in text, useful for keeping indentation of code 
   keywordstyle=\color{blue},         % keyword style
   language=C,                        % the default language of the code
