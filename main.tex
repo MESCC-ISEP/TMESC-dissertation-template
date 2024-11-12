@@ -1,10 +1,11 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TMESC Dissertation
 % LaTeX Template
-% Version 0.2 (Aug/2023)
+% Version 0.3 (Oct/2024)
 %
-% Adapted to MESCC/ISEP (Apr/2023, Aug/2023 & Nov/2023) by
-% Luis Miguel Pinho
+% Adapted to MESCC/ISEP (Apr/2023) by
+% Luis Miguel Pinho (lmp@isep.ipp.pt) and
+% António Barros (amb@isep.ipp.pt)
 %
 % Based on TMDEI/ISEP style (Dec/2015) by
 %  Nuno Pereira (nap@isep.ipp.pt) and
@@ -28,19 +29,20 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[
-11pt, % The default document font size, options: 10pt, 11pt, 12pt
-%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side (for drafting/reading purposes)
-english, % english for English;
-%portuguese,% for Portuguese; delete temporary files if you change language (e.g. 'make clean; make')
-singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing (for drafting/reading purposes)
-%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
-%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
-liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents (not recommended)
-%toctotoc, % Uncomment to add the main table of contents to the table of contents (not recommended)
-parskip, % Add space between paragraphs (recommended)
-%nohyperref, % Uncomment to not load the hyperref package (not recommended)
-nohyperreflinkcolor, % hyperref links are not colored (comment to color links, for example to produce an electronic-only version)
-headsepline, % Uncomment to get a line under the header
+	11pt, % The default document font size, options: 10pt, 11pt, 12pt
+	%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side (for drafting/reading purposes)
+	english, % english for English;
+	%portuguese, % for Portuguese; delete temporary files if you change language (e.g. 'make clean; make')
+	%singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing (for drafting/reading purposes)
+	onehalfspacing, % AMB: Specified by the ISEP template guidelines.
+	%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+	nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+	%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents (not recommended)
+	%toctotoc, % Uncomment to add the main table of contents to the table of contents (not recommended)
+	parskip, % Add space between paragraphs (recommended)
+	%nohyperref, % Uncomment to not load the hyperref package (not recommended)
+	nohyperreflinkcolor, % hyperref links are not colored (comment to color links, for example to produce an electronic-only version)
+	headsepline, % Uncomment to get a line under the header
 ]{tmesc-style} % The class file specifying the document structure
 
 \usepackage{tikz} % Required for creating graphics programmatically (can be removed if not used)
@@ -54,12 +56,15 @@ headsepline, % Uncomment to get a line under the header
 %
 
 % authoryear-comp: recommended citation style (e.g. (Buendía, 1860), (Buendía 1910, Arcadio 1940))
+% AMB: USE THIS STYLE, according to ISEP dissertation guidelines.
 \usepackage[style=authoryear-comp,backend=biber]{biblatex} % Bibtex backend with the authoryear-comp citation style (authoryear citations, bibliography ordered alphabetically)
 
 % numeric citation style (e.g. [1], [1-3])
+% AMB: DO NOT USE THIS STYLE, according to ISEP dissertation guidelines.
 %\usepackage[style=numeric-comp,sorting=none,backend=biber]{biblatex} % Bibtex backend with the numeric-comp citation style (numeric citations, bibliography ordered by appearance)
 
 % alphabetic citation style (e.g. [Buendía10], [Buendía10, Arcadio40])
+% AMB: DO NOT USE THIS STYLE, according to ISEP dissertation guidelines.
 %\usepackage[style=alphabetic,sorting=none,backend=biber]{biblatex} % Bibtex backend with the alphabetic citation style (alphabetic citations, bibliography ordered by appearance)
 
 
@@ -67,11 +72,12 @@ headsepline, % Uncomment to get a line under the header
 
 \makeglossaries % build the glossary
 
+
 %----------------------------------------------------------------------------------------
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{{[}Title{]}} % Your thesis title, this is used in the title, print it elsewhere with \ttitle
+\thesistitle{{[}Dissertation Title{]}} % Your thesis title, this is used in the title, print it elsewhere with \ttitle
 
 \thesissubtitle{{[}Subtitle (if exists){]}} % Your thesis subtitle, this is used in the title, print it elsewhere with \tsubtitle, comment line if not existing
 
@@ -80,6 +86,8 @@ headsepline, % Uncomment to get a line under the header
 \supervisor{{[}Full Name{]}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 
 \cosupervisor{{[}Full Name (if exists){]}} % Your co-supervisor's name, this is used in the title page, print it elsewhere with \cosupname (comment, if no co-supervisor)
+
+\externalsupervisor{{[}Full Name (if exists){]}} % Your external (company) supervisor's name, this is used in the title page, print it elsewhere with \extsupname (comment, if no external supervisor)
 
 \committeepresident{{[}Full Name, Category, Affiliation{]}} % Name of the president of the evaluation committee, print it elsewhere with \presidentname
 
@@ -92,6 +100,11 @@ headsepline, % Uncomment to get a line under the header
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
 \hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+
+
+%----------------------------------------------------------------------------------------
+%	THE CONTENT OF THE DOCUMENT BEGINS HERE
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 

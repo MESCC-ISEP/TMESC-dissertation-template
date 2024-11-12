@@ -6,9 +6,9 @@ This template provides the main formatting rules for the Master dissertation doc
 
 **You can fork this repository to make your own dissertation based on this template.**
 
-This template is an adaptation of the TMDEI/ISEP style (Version 0.2, Feb/2022), by Luis Miguel Pinho. 
+This template is an adaptation of the TMDEI/ISEP style (Version 0.2, Feb/2022), and modified to align with the ISEP dissertation guidelines (Regulamento n.o 1030/2023, 21 September 2023) by Luis Miguel Pinho and António Barros. 
 
-The TMDEI/ISEP template was produced by Nuno Pereira and Paulo Baltarejo (DEI/ISEP), and can be downloaded from [the repository](https://bitbucket.org/napereira/tmdei-dissertation-template/src/master/).
+The TMDEI/ISEP template was produced by Nuno Pereira and Paulo Baltarejo (DEI/ISEP), and can be downloaded from [the repository](https://github.com/MEI-ISEP/tmdei-dissertation-template).
 
 Originally based on MastersDoctoralThesis version 1.2 by Vel (vel@latextemplates.com) and Johannes Böttcher, downloaded from [LaTeXTemplates](http://www.LaTeXTemplates.com) in November/2015. Adapted to TMDEI/ISEP style (Dec/2015) by Nuno Pereira and Paulo Baltarejo (DEI/ISEP).
 
@@ -34,6 +34,9 @@ Make sure you have the following tools installed: **pdflatex**, **makeglossaries
 
 | Package | Obs |
 |---------|-----|
+|etoolbox| |
+|xparse| |
+|parskip| |
 |babel|Required for automatically changing names of document elements to languages besides english|
 |scrbase|Required for handling language-dependent names of sections/document elements|
 |scrhack|Loads fixes for various packages|
@@ -43,19 +46,25 @@ Make sure you have the following tools installed: **pdflatex**, **makeglossaries
 |graphicx|Required to include images|
 |xcolor|Required for extra color names|
 |booktabs|Required for better table rules|
+|lmodern|Latin Modern fonts|
+|opensans|Default (sans serif) font|
+|inconsolata|Mono space font for listings|
 |inputenc|Required for inputting portuguese characters|
 |fontenc|Output font encoding for portuguese characters|
 |csquotes|Required to generate language-dependent quotes in the bibliography|
-|cmbright|Default font: CM Bright, lighter sans-serif variant of Computer Modern Sans Serif|
 |algorithm|Required for algorithms|
 |algpseudocode|Part of algorithmicx package, required to customize the layout of algorithms|
 |listings|Required for code listings|
 |glossaries|Required to define acronyms and make glossaries|
 |caption|Required for customising the captions|
+|geometry| |
+|scrlayer-scrpage| |
 |biblatex|Required for citations and bibliography|
+|hyperref| |
 |tikz|Required for creating graphics programmatically (can be removed if not used)|
 |pgfplots|Required for drawing high--quality function plots (can be removed if not used)|
 
 ## Who do I talk to? ##
 
 * Luis Miguel Pinho (LMP@isep.ipp.pt)
+* António Barros (AMB@isep.ipp.pt)
