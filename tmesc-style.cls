@@ -18,7 +18,7 @@
 % Adapted to MESCC/ISEP (Apr/2023) by
 %  Luis Miguel Pinho (lmp@isep.ipp.pt)
 %
-% Last update (Oct/2024)
+% Last update (Nov/2024)
 %  Luis Miguel Pinho (lmp@isep.ipp.pt)
 %  António Barros (amb@isep.ipp.pt)
 % 
@@ -167,7 +167,7 @@
 
 \RequirePackage{booktabs} % Required for better table rules
 
-\RequirePackage{lmodern} % AMB: Latin Modern Roman for the text body.
+\RequirePackage{lmodern} % AMB: Latin Modern Roman for the text body (if needed serif font).
 \RequirePackage[defaultsans,scale=0.90]{opensans} % AMB: Sans serif font similar to Calibri and Aptos, as required by the ISEP template guidelines.
 \RequirePackage{inconsolata} % AMB Inconsolata mono space font for listings.
 
@@ -193,6 +193,7 @@
   escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
   extendedchars=true,                % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   frame=single,	                     % adds a frame around the code
+  xleftmargin=1cm,					 % AMB: According to ISEP dissertation guidelines
   keepspaces=true,                   % keeps spaces in text, useful for keeping indentation of code 
   keywordstyle=\color{blue},         % keyword style
   language=C,                        % the default language of the code

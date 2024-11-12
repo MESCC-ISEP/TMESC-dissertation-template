@@ -69,20 +69,18 @@ Listing~\ref{lst:euclid_java} and Listing~\ref{lst:euclid_c} show the source cod
 
 \begin{minipage}{\linewidth}
 \lstinputlisting [language=Java,
-caption=Euclid’s algorithm (Java).,
-label=lst:euclid_java]
+	caption=Euclid’s algorithm (Java).,
+	label=lst:euclid_java]
 {ch3/assets/euclid.java}
 \end{minipage}
 
-\begin{center}
-\begin{minipage}{0.7\linewidth}
+\begin{minipage}{\linewidth}
 \lstinputlisting [language=C, 
-caption=Euclid’s algorithm (C).,
-label=lst:euclid_c,
-numbers=none]
+	caption=Euclid’s algorithm (C).,
+	label=lst:euclid_c,
+	numbers=none]
 {ch3/assets/euclid.c}
 \end{minipage}
-\end{center}
 
 Here it is the \LaTeX{} text for both listings. Note that we encapsulate the listings inside a \verb|\minipage| so that the listing does note break across pages.
 Using the \verb|\lstinputlisting| command, the source code must be written in a separate file. In these two cases, both files are in \path{ch3\assets\} directory.
@@ -90,20 +88,18 @@ Using the \verb|\lstinputlisting| command, the source code must be written in a 
 \begin{verbatim}
 \begin{minipage}{\linewidth}
 \lstinputlisting [language=Java,
-caption=Euclid’s algorithm (Java).,
-label=lst:euclid_java]
+    caption=Euclid’s algorithm (Java).,
+    label=lst:euclid_java]
 {ch3/assets/euclid.java}
 \end{minipage}
 
-\begin{center}
-\begin{minipage}{0.7\linewidth}
+\begin{minipage}{\linewidth}
 \lstinputlisting [language=C, 
-caption=Euclid’s algorithm (C).,
-label=lst:euclid_c,
-numbers=none]
+    caption=Euclid’s algorithm (C).,
+    label=lst:euclid_c,
+    numbers=none]
 {ch3/assets/euclid.c}
 \end{minipage}
-\end{center}
 
 \end{verbatim}
 As it can be seen from the text above, there are a lot of parameters that can be specified, like programming language (\verb|language|), numbering, etc.   
