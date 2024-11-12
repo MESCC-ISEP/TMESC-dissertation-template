@@ -336,9 +336,9 @@ KOMA-script documentation for details.}]{fancyhdr}
 %	TITLEPAGE PAGE DESIGN
 %----------------------------------------------------------------------------------------
 
-\newcommand{\dissertationdisclamer}{Dissertation submitted in partial fulfilment of the requirements for the\\ Master’s degree in Critical Computing Systems Engineering}
-\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{Dissertation submitted in partial fulfilment of the requirements for the \\ Master’s degree in Critical Computing Systems Engineering}
-\providecaptionname{portuguese}{\dissertationdisclamer}{Disserta\c{c}\~ao submetida para satisfa\c{c}\~ao parcial dos requisitos do grau de \\ Mestre em Engenharia de Sistemas Computacionais Críticos} % Portuguese 
+\newcommand{\dissertationdisclamer}{Dissertation submitted in partial fulfilment of the requirements for the\\ Master’s Degree in Critical Computing Systems Engineering}
+\providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\dissertationdisclamer}{Dissertation submitted in partial fulfilment of the requirements for the \\ Master’s Degree in Critical Computing Systems Engineering}
+\providecaptionname{portuguese}{\dissertationdisclamer}{Disserta\c{c}\~ao submetida para satisfa\c{c}\~ao parcial dos requisitos do Grau de \\ Mestre em Engenharia de Sistemas Computacionais Críticos} % Portuguese 
 
 \newcommand{\supervisorlabel}{Supervisor}
 \providecaptionname{american,australian,british,canadian,english,newzealand,UKenglish,USenglish}{\supervisorlabel}{Supervisor}
