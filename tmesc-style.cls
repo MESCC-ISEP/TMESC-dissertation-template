@@ -369,7 +369,7 @@ KOMA-script documentation for details.}]{fancyhdr}
 	\newgeometry{top=3.5cm, bottom=3.0cm, left=3.0cm, right=3.0cm}
 	\begin{titlepage}
 	\begin{center}
-    {\noindent \includegraphics[width=3in]{/frontmatter/assets/isep_wordmark_expanded_vintage.pdf}}
+    	{\noindent \includegraphics[width=3in]{/frontmatter/assets/isep_wordmark_expanded_vintage.pdf}}
 	\null
 
 	\vspace*{0.5cm}
