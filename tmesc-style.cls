@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TMESC Thesis Class File
-% Version 0.3 (Oct/2024)
+% Version 0.4 (Dec/2024)
 %
 % Based on MastersDoctoralThesis Version 1.2 by Vel (vel@latextemplates.com) and
 % Johannes Böttcher, downloaded from (21/11/15):
