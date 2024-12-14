@@ -1,6 +1,6 @@
 # README #
 
-*MESCC Dissertation  LaTeX Template - Version 0.1 (April/2023)*
+*MESCC Dissertation  LaTeX Template - Version 0.4 (December/2024)*
 
 This template provides the main formatting rules for the Master dissertation document of the [Critical Computing Systems Engineering Master](https://www.isep.ipp.pt/mescc/), Computer Engineering Department (DEI), School of Engineering (ISEP) of the Polytechnic of Porto (IPP).
 
@@ -28,6 +28,9 @@ LaTeX is available for many systems including Windows, Linux and Mac OS X. Check
 
 Make sure you have the following tools installed: **pdflatex**, **makeglossaries**, **biber**, **latexmk**.
 
+### How to generate the PDF document
+
+From the command line, simply run **make** and wait. If successful, the resulting file will be **main.pdf**.
 
 
 ### LaTeX Packages Needed

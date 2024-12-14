@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TMESC Thesis Class File
-% Version 0.3 (Nov/2024)
+% Version 0.4 (Dec/2024)
 %
 % Based on MastersDoctoralThesis Version 1.2 by Vel (vel@latextemplates.com) and
 % Johannes Böttcher, downloaded from (21/11/15):
@@ -226,7 +226,7 @@
       {°}{{\textdegree}}1 {º}{{\textordmasculine}}1 {ª}{{\textordfeminine}}1
 }
 
-\RequirePackage[acronym,nonumberlist,toc]{glossaries} % Required to define acronyms and make glossaries
+\RequirePackage[acronym,nonumberlist]{glossaries} % Required to define acronyms and make glossaries
 
 \RequirePackage[centerlast,small,sc]{caption} % Required for customising the captions
 \setlength{\captionmargin}{50pt}
