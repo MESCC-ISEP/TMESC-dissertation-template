@@ -28,9 +28,20 @@ LaTeX is available for many systems including Windows, Linux and Mac OS X. Check
 
 Make sure you have the following tools installed: **pdflatex**, **makeglossaries**, **biber**, **latexmk**.
 
-### How to generate the PDF document
+### How to generate the PDF document automatically using make
 
 From the command line, simply run **make** and wait. If successful, the resulting file will be **main.pdf**.
+
+### Steps to generate the PDF document manually
+
+To generate the PDF document manually from scratch, execute the following sequence of commands:
+
+1. `pdflatex main.tex`  
+2. `biber main`  
+3. `makeglossaries main`  
+4. `pdflatex main.tex`  
+5. `pdflatex main.tex`  
+
 
 
 ### LaTeX Packages Needed
